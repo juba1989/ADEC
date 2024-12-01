@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulaire Club de Sport</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="form-container">
+        <h1>Formulaire Club de Sport</h1>
+
+        <input type="file" id="fileInput" />
+        <button id="loadFileButton">Charger le fichier Excel</button>
+
+        <form id="clubForm">
+            <label for="clubName">Nom du Club :</label>
+            <select id="clubSelect" required>
+                <option value="">Choisir un club</option>
+            </select>
+
+            <label for="coachName">Nom de l'Entraîneur :</label>
+            <select id="coachSelect" required>
+                <option value="">Choisir un entraîneur</option>
+            </select>
+
+            <label for="daySelect">Jour de la Séance :</label>
+            <select id="daySelect" required>
+                <option value="">Choisir un jour</option>
+                <option value="Lundi">Lundi</option>
+                <option value="Mardi">Mardi</option>
+                <option value="Mercredi">Mercredi</option>
+                <option value="Jeudi">Jeudi</option>
+                <option value="Vendredi">Vendredi</option>
+            </select>
+
+            <label for="exerciseSelect">Exercices :</label>
+            <select id="exerciseSelect" required>
+                <option value="">Choisir un exercice</option>
+            </select>
+
+            <label for="playerSelect">Joueurs :</label>
+            <select id="playerSelect" required>
+                <option value="">Choisir un joueur</option>
+            </select>
+            
+            <button type="button" id="addPlayer">Ajouter un autre joueur</button>
+
+            <button type="button" id="submitForm">Valider et Générer Excel</button>
+        </form>
+    </div>
+
+    <script src="script.js"></script>
+    <script src="https://cdn.sheetjs.com/xlsx-latest/package/dist/xlsx.full.min.js"></script>
+</body>
+</html>
